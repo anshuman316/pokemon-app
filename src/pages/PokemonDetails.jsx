@@ -4,7 +4,7 @@ import { fetchPokemonDetails } from '../api/pokeapi'
 import Header from '../components/Header'
 import './PokemonDetails.css'
 
-// Highest base stat any Pokémon has (Blissey's HP), used to size the stat bars
+// pikachu - pickachu
 const MAX_STAT = 255
 
 const STAT_LABELS = {
@@ -26,7 +26,6 @@ function PokemonDetails() {
   const location = useLocation()
 
   const [attempt, setAttempt] = useState(0)
-  // Same idea as the list: a result only counts if it answers the current request
   const [result, setResult] = useState(null)
   const requestKey = `${name}:${attempt}`
 
@@ -50,8 +49,6 @@ function PokemonDetails() {
   const error = !loading && result.error
   const pokemon = !loading && result.pokemon
 
-  // Go back to wherever the user came from (keeps their list page). If they opened
-  // this page directly there's nothing to go back to, so send them to the list instead.
   function goBack() {
     if (location.key === 'default') navigate('/pokemon')
     else navigate(-1)

@@ -1,4 +1,4 @@
-/* Apex Dex design tokens (from the Stitch DESIGN.md) */
+/* when does this ends */
 :root {
   --surface-base: #0d131f;
   --surface-container: #1a202c;
@@ -14,7 +14,6 @@
   --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  /* Older names still used by the Pokémon list page */
   --bg: var(--surface-base);
   --surface: var(--surface-container);
   --text: var(--on-surface);
@@ -41,7 +40,6 @@ body {
   background: var(--surface-base);
 }
 
-/* Shared by the list and details pages */
 .status {
   text-align: center;
   padding: 2rem 0;

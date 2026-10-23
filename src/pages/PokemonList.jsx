@@ -8,19 +8,16 @@ import './PokemonList.css'
 const PAGE_SIZE = 20
 
 function PokemonList() {
-  // The page lives in the URL (?page=3) so going Back from a details page lands on the same page
   const [searchParams, setSearchParams] = useSearchParams()
   const page = Math.max(0, (parseInt(searchParams.get('page'), 10) || 1) - 1)
 
   const [search, setSearch] = useState('')
   const [attempt, setAttempt] = useState(0)
-  // The last response we got, tagged with the request it answers. If the tag doesn't
-  // match the current request, that one is still loading.
   const [result, setResult] = useState(null)
   const requestKey = `${page}:${attempt}`
 
+  // im tired
   useEffect(() => {
-    // Ignore a slow response if the user has already moved to another page
     let ignore = false
 
     fetchPokemonList(PAGE_SIZE, page * PAGE_SIZE)

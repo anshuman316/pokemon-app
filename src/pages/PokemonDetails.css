@@ -37,7 +37,6 @@
   gap: 1rem;
 }
 
-/* Artwork + name + types */
 .details-hero {
   display: flex;
   flex-direction: column;
@@ -131,7 +130,6 @@
   font-weight: 600;
 }
 
-/* Abilities and stats cards */
 .panel {
   padding: 1.25rem 1.5rem;
   background: var(--surface-container);
@@ -230,7 +228,6 @@
   border-radius: inherit;
 }
 
-/* Tablet and up: artwork beside the name */
 @media (min-width: 640px) {
   .details-hero {
     flex-direction: row;

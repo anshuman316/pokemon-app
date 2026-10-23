@@ -4,7 +4,6 @@
   color: var(--on-surface);
 }
 
-/* Page body: centered column, wider on desktop */
 .welcome-main {
   max-width: 880px;
   margin: 0 auto;
@@ -38,7 +37,6 @@
   color: var(--on-surface-variant);
 }
 
-/* A single Pokédex card, centred under the greeting */
 .hub {
   max-width: 420px;
   margin: 0 auto;
@@ -130,7 +128,6 @@
   font-size: 16px;
 }
 
-/* Tablet and up: cards side by side, a bit roomier */
 @media (min-width: 640px) {
   .welcome-main {
     padding-top: 4rem;
