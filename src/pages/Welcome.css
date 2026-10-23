@@ -1,0 +1,218 @@
+.welcome {
+  min-height: 100vh;
+  background: var(--surface-base);
+  color: var(--on-surface);
+}
+
+/* Frosted top bar */
+.welcome-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 1rem;
+  background: rgba(13, 19, 31, 0.8);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+}
+
+.welcome-brand {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-logo {
+  height: 36px;
+  width: auto;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(36, 42, 55, 0.6);
+  color: var(--on-surface-variant);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.icon-button:hover {
+  color: var(--primary);
+}
+
+/* Page body: centered column, wider on desktop */
+.welcome-main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.welcome-greeting {
+  margin-bottom: 1.5rem;
+}
+
+.eyebrow {
+  font-family: var(--font-heading);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+}
+
+.welcome-greeting h1 {
+  margin: 0.25rem 0;
+  font-family: var(--font-heading);
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+}
+
+.welcome-greeting p {
+  margin: 0;
+  max-width: 24rem;
+  color: var(--on-surface-variant);
+}
+
+/* The two hub cards */
+.hub {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 148px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--surface-container);
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.15s, box-shadow 0.3s;
+}
+
+.hub-card:hover {
+  background: var(--surface-container-high);
+}
+
+.hub-card:active {
+  transform: scale(0.99);
+}
+
+/* Each card has its own accent colour */
+.hub-card--primary {
+  --card-accent: var(--primary);
+  --card-glow: rgba(56, 189, 248, 0.25);
+}
+
+.hub-card--secondary {
+  --card-accent: var(--secondary);
+  --card-glow: rgba(251, 191, 36, 0.25);
+}
+
+.hub-card:hover,
+.hub-card:focus-visible {
+  box-shadow: 0 0 20px var(--card-glow);
+}
+
+.hub-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.hub-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.5rem;
+  background: var(--surface-container-high);
+  color: var(--card-accent);
+}
+
+.hub-arrow {
+  font-size: 20px;
+  color: var(--on-surface-variant);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.hub-card:hover .hub-arrow {
+  color: var(--card-accent);
+  transform: translateX(3px);
+}
+
+.hub-card h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hub-card p {
+  margin: 0.125rem 0 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--on-surface-variant);
+}
+
+.hub-cta {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--card-accent);
+}
+
+.hub-cta .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* Tablet and up: cards side by side, a bit roomier */
+@media (min-width: 640px) {
+  .welcome-header {
+    padding: 0 2rem;
+  }
+
+  .welcome-main {
+    padding-top: 4rem;
+  }
+
+  .welcome-greeting {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .welcome-greeting h1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .welcome-greeting p {
+    margin: 0 auto;
+  }
+
+  .hub {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .hub-card {
+    min-height: 200px;
+    padding: 1.5rem;
+  }
+}

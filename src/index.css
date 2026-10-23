@@ -1,0 +1,41 @@
+/* Apex Dex design tokens (from the Stitch DESIGN.md) */
+:root {
+  --surface-base: #0d131f;
+  --surface-container: #1a202c;
+  --surface-container-high: #242a37;
+  --on-surface: #dde2f3;
+  --on-surface-variant: #bdc8d1;
+  --primary: #38bdf8;
+  --secondary: #fbbf24;
+  --tertiary: #f43f5e;
+  --border: rgba(255, 255, 255, 0.06);
+
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Older names still used by the Pokémon list page */
+  --bg: var(--surface-base);
+  --surface: var(--surface-container);
+  --text: var(--on-surface);
+  --muted: var(--on-surface-variant);
+  --accent: var(--primary);
+  --shadow: rgba(56, 189, 248, 0.2);
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 20px;
+  color-scheme: dark;
+  color: var(--on-surface);
+  background: var(--surface-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--surface-base);
+}
