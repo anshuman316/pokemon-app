@@ -1,21 +1,15 @@
 import { Link } from 'react-router-dom'
-import './Welcome.css'
+import Header from '../components/Header'
+import './Home.css'
 
-// Official logo hosted on Wikimedia Commons
-const POKEMON_LOGO =
-  'https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg'
-
-function Welcome() {
+function Home() {
   return (
     <div className="welcome">
-      <header className="welcome-header">
-        <Link to="/" className="welcome-brand">
-          <img src={POKEMON_LOGO} alt="Pokémon" className="welcome-logo" />
-        </Link>
+      <Header>
         <Link to="/pokemon" className="icon-button" aria-label="Search Pokédex">
-          <span className="material-symbols-outlined">search</span>
+          <span className="material-symbols-outlined" aria-hidden="true">search</span>
         </Link>
-      </header>
+      </Header>
 
       <main className="welcome-main">
         <section className="welcome-greeting">
@@ -28,9 +22,9 @@ function Welcome() {
           <Link to="/pokemon" className="hub-card hub-card--primary">
             <div className="hub-card-top">
               <span className="hub-icon">
-                <span className="material-symbols-outlined">dataset</span>
+                <span className="material-symbols-outlined" aria-hidden="true">dataset</span>
               </span>
-              <span className="material-symbols-outlined hub-arrow">arrow_forward</span>
+              <span className="material-symbols-outlined hub-arrow" aria-hidden="true">arrow_forward</span>
             </div>
             <div>
               <h2>Pokédex</h2>
@@ -38,16 +32,16 @@ function Welcome() {
             </div>
             <span className="hub-cta">
               Open Pokédex
-              <span className="material-symbols-outlined">chevron_right</span>
+              <span className="material-symbols-outlined" aria-hidden="true">chevron_right</span>
             </span>
           </Link>
 
           <Link to="/fun" className="hub-card hub-card--secondary">
             <div className="hub-card-top">
               <span className="hub-icon">
-                <span className="material-symbols-outlined">play_circle</span>
+                <span className="material-symbols-outlined" aria-hidden="true">play_circle</span>
               </span>
-              <span className="material-symbols-outlined hub-arrow">arrow_forward</span>
+              <span className="material-symbols-outlined hub-arrow" aria-hidden="true">arrow_forward</span>
             </div>
             <div>
               <h2>Cat video</h2>
@@ -55,7 +49,7 @@ function Welcome() {
             </div>
             <span className="hub-cta">
               Watch Random Clip
-              <span className="material-symbols-outlined">chevron_right</span>
+              <span className="material-symbols-outlined" aria-hidden="true">chevron_right</span>
             </span>
           </Link>
         </section>
@@ -64,4 +58,4 @@ function Welcome() {
   )
 }
 
-export default Welcome
+export default Home

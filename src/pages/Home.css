@@ -4,48 +4,6 @@
   color: var(--on-surface);
 }
 
-/* Frosted top bar */
-.welcome-header {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
-  padding: 0 1rem;
-  background: rgba(13, 19, 31, 0.8);
-  backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--border);
-}
-
-.welcome-brand {
-  display: flex;
-  align-items: center;
-}
-
-.welcome-logo {
-  height: 36px;
-  width: auto;
-}
-
-.icon-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  background: rgba(36, 42, 55, 0.6);
-  color: var(--on-surface-variant);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.icon-button:hover {
-  color: var(--primary);
-}
-
 /* Page body: centered column, wider on desktop */
 .welcome-main {
   max-width: 880px;
@@ -184,10 +142,6 @@
 
 /* Tablet and up: cards side by side, a bit roomier */
 @media (min-width: 640px) {
-  .welcome-header {
-    padding: 0 2rem;
-  }
-
   .welcome-main {
     padding-top: 4rem;
   }

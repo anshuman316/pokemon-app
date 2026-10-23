@@ -1,17 +1,15 @@
 import { Routes, Route, Link } from 'react-router-dom'
-import Welcome from './pages/Welcome'
+import Home from './pages/Home'
 import PokemonList from './pages/PokemonList'
+import PokemonDetails from './pages/PokemonDetails'
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Welcome />} />
+      <Route path="/" element={<Home />} />
       <Route path="/pokemon" element={<PokemonList />} />
-      {/* Placeholders until we build these pages */}
-      <Route
-        path="/pokemon/:name"
-        element={<p style={{ padding: '2rem' }}>Details page coming soon. <Link to="/">Back home</Link></p>}
-      />
+      <Route path="/pokemon/:name" element={<PokemonDetails />} />
+      {/* Placeholder until we build this page */}
       <Route
         path="/fun"
         element={<p style={{ padding: '2rem' }}>Funny clips coming soon. <Link to="/">Back home</Link></p>}
