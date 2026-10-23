@@ -19,7 +19,7 @@ function Home() {
         </section>
 
         <section className="hub">
-          <Link to="/pokemon" className="hub-card hub-card--primary">
+          <Link to="/pokemon" className="hub-card">
             <div className="hub-card-top">
               <span className="hub-icon">
                 <span className="material-symbols-outlined" aria-hidden="true">dataset</span>
@@ -36,22 +36,6 @@ function Home() {
             </span>
           </Link>
 
-          <Link to="/fun" className="hub-card hub-card--secondary">
-            <div className="hub-card-top">
-              <span className="hub-icon">
-                <span className="material-symbols-outlined" aria-hidden="true">play_circle</span>
-              </span>
-              <span className="material-symbols-outlined hub-arrow" aria-hidden="true">arrow_forward</span>
-            </div>
-            <div>
-              <h2>Cat video</h2>
-              <p>Just a cat video</p>
-            </div>
-            <span className="hub-cta">
-              Watch Random Clip
-              <span className="material-symbols-outlined" aria-hidden="true">chevron_right</span>
-            </span>
-          </Link>
         </section>
       </main>
     </div>

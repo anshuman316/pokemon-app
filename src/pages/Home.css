@@ -38,14 +38,15 @@
   color: var(--on-surface-variant);
 }
 
-/* The two hub cards */
+/* A single Pokédex card, centred under the greeting */
 .hub {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
+  max-width: 420px;
+  margin: 0 auto;
 }
 
 .hub-card {
+  --card-accent: var(--primary);
+  --card-glow: rgba(56, 189, 248, 0.25);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -66,17 +67,6 @@
 
 .hub-card:active {
   transform: scale(0.99);
-}
-
-/* Each card has its own accent colour */
-.hub-card--primary {
-  --card-accent: var(--primary);
-  --card-glow: rgba(56, 189, 248, 0.25);
-}
-
-.hub-card--secondary {
-  --card-accent: var(--secondary);
-  --card-glow: rgba(251, 191, 36, 0.25);
 }
 
 .hub-card:hover,
@@ -158,11 +148,6 @@
 
   .welcome-greeting p {
     margin: 0 auto;
-  }
-
-  .hub {
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
   }
 
   .hub-card {
